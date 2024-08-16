@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:h2m_destrib/core/Routing/routes.dart';
+import 'package:h2m_destrib/feature/Home/UI/home_screen.dart';
 import 'package:h2m_destrib/feature/Home/UI/login_screen.dart';
 import 'package:h2m_destrib/feature/onboarding/onboarding_screen.dart';
 
@@ -7,7 +8,7 @@ class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => const Scaffold());
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.loginScreen:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case Routes.onboardingScreen:
