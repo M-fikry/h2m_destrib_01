@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:h2m_destrib/core/Routing/routes.dart';
 import 'package:h2m_destrib/core/Theming/styles.dart';
-import 'package:h2m_destrib/core/helpers/extensions.dart';
 import 'package:h2m_destrib/core/helpers/spacing.dart';
-import 'package:h2m_destrib/core/wedgits/app_form_text_field.dart';
 import 'package:h2m_destrib/core/wedgits/app_text_button.dart';
+import 'package:h2m_destrib/features/login/UI/widgets/login_block_listenner.dart';
+import 'package:h2m_destrib/features/login/UI/widgets/username_and_password.dart';
+import 'package:h2m_destrib/features/login/data/models/login_request_body.dart';
+
+import '../logic/cubit/login_cubit.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -15,9 +18,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final formKey = GlobalKey<FormState>();
-  bool isObscureText = true;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,49 +47,35 @@ class _LoginScreenState extends State<LoginScreen> {
                   textAlign: TextAlign.center,
                 ),
                 spacingVertical(36),
-                Form(
-                    key: formKey,
-                    child: Column(
-                      children: [
-                        const AppFormTextField(
-                          suffixIcon: Icon(Icons.cloud_circle_outlined),
-                          hintText: 'مسار الاتصال',
-                        ),
-                        spacingVertical(16),
-                        const AppFormTextField(
-                          suffixIcon: Icon(Icons.person_outline),
-                          hintText: 'إسم المستخدم',
-                        ),
-                        spacingVertical(16),
-                        AppFormTextField(
-                          suffixIcon: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                isObscureText = !isObscureText;
-                              });
-                            },
-                            child: Icon(isObscureText
-                                ? Icons.visibility_off
-                                : Icons.visibility),
-                          ),
-                          hintText: 'كلمة المرور',
-                          isObscureText: isObscureText,
-                        )
-                      ],
-                    )),
+                const Column(
+                  children: [
+                    
+                    UsernameAndPassword()
+                  ],
+                ),
                 spacingVertical(30),
                 AppTextButton(
                     borderRadius: 20.r,
                     buttonText: 'تسجيل الدخول',
                     textStyle: TextStyles.font24white,
                     onPressed: () {
-                      context.pushNamed(Routes.homeScreen);
-                    })
+                      validateAndLogin(context);
+                    }),
+                const LoginBlockListenner(),
               ],
             ),
           ),
         ),
       )),
     );
+  }
+
+  void validateAndLogin(BuildContext context) {
+    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      context.read<LoginCubit>().emitLoginStates(LoginRequestBody(
+            user_namee: context.read<LoginCubit>().usernameController.text,
+            passwordText: context.read<LoginCubit>().passwordController.text,
+          ));
+    }
   }
 }

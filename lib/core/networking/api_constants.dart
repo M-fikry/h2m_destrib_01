@@ -1,5 +1,6 @@
 class ApiConstants {
-  static const String apiBaseUrl = "https://localhost:44345/";
+  //static const String apiBaseUrl = "https://127.0.0.1:44345/";
+  static const String apiBaseUrlApi = "http://10.0.2.2:8000/";
 
   static const String login = "User/Login";
 
@@ -80,7 +81,6 @@ class ApiConstants {
 
   static const String addHrketOmlaSdad = "Omla/AddHrketOmlaSdad";
 }
-
 
 class ApiErrors {
   static const String badRequestError = "badRequestError";

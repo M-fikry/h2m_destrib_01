@@ -5,12 +5,14 @@ class DioFactory {
   DioFactory._();
   static Dio? dio;
 
-  static Dio getDio() {
+  static Future<Dio> getDio() async {
     Duration connectTimeout = const Duration(seconds: 30);
 
     if (dio == null) {
       dio = Dio();
       dio!
+        
+        //..options.baseUrl = ApiConstants.apiBaseUrl
         ..options.connectTimeout = connectTimeout
         ..options.receiveTimeout = connectTimeout;
       AddDioInterCeptor();

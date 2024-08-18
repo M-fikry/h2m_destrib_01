@@ -8,12 +8,12 @@ part of 'login_request_body.dart';
 
 LoginRequestBody _$LoginRequestBodyFromJson(Map<String, dynamic> json) =>
     LoginRequestBody(
-      username: json['username'] as String,
-      password: json['password'] as String,
+      user_namee: json['user_namee'] as String,
+      passwordText: json['passwordText'] as String,
     );
 
 Map<String, dynamic> _$LoginRequestBodyToJson(LoginRequestBody instance) =>
     <String, dynamic>{
-      'username': instance.username,
-      'password': instance.password,
+      'user_namee': instance.user_namee,
+      'passwordText': instance.passwordText,
     };
