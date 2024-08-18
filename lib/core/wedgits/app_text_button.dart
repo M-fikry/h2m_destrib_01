@@ -31,11 +31,11 @@ class AppTextButton extends StatelessWidget {
       style: ButtonStyle(
         padding: WidgetStateProperty.all(
           EdgeInsets.symmetric(
-              horizontal: horizontalPadding ?? 20.0,
-              vertical: verticalPadding ?? 16.0),
+              horizontal: horizontalPadding ?? 10.0,
+              vertical: verticalPadding ?? 6.0),
         ),
         minimumSize: WidgetStateProperty.all(
-            Size(buttWidth ?? double.infinity, buttHeight ?? 20.h)),
+            Size(buttWidth ?? double.infinity.w, buttHeight ?? 20.h)),
         textStyle: WidgetStateProperty.all(textStyle ?? TextStyles.font24white),
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(

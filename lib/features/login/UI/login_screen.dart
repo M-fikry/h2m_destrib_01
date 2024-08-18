@@ -6,7 +6,6 @@ import 'package:h2m_destrib/core/helpers/extensions.dart';
 import 'package:h2m_destrib/core/helpers/spacing.dart';
 import 'package:h2m_destrib/core/wedgits/app_form_text_field.dart';
 import 'package:h2m_destrib/core/wedgits/app_text_button.dart';
-import 'package:h2m_destrib/feature/onboarding/widgets/get_started_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,7 +15,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final FormKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
   bool isObscureText = true;
 
   @override
@@ -43,12 +42,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 spacingVertical(8),
                 Text(
-                  'لإتمام عملية التسجيل بنجاح برجاء التواصل مع إدارة شركتك للحصول على بيانات التسجيل الخاصة بك',
+                  'لإتمام عملية التسجيل بنجاح برجاء التواصل مع إدارة شركتك للحصول على بيانات التسجيل الخاصة بك.',
                   style: TextStyles.font14GreyRegular,
+                  textAlign: TextAlign.center,
                 ),
                 spacingVertical(36),
                 Form(
-                    key: FormKey,
+                    key: formKey,
                     child: Column(
                       children: [
                         const AppFormTextField(

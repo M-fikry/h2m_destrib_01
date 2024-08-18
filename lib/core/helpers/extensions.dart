@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension navigation on BuildContext {
+extension Navigation on BuildContext {
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }

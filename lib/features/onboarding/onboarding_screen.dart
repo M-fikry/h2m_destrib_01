@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h2m_destrib/core/Theming/styles.dart';
-import 'package:h2m_destrib/feature/onboarding/widgets/destrib_logo_and_name.dart';
-import 'package:h2m_destrib/feature/onboarding/widgets/get_started_button.dart';
-import 'package:h2m_destrib/feature/onboarding/widgets/person_image_and_text.dart';
+import 'package:h2m_destrib/features/onboarding/widgets/destrib_logo_and_name.dart';
+import 'package:h2m_destrib/features/onboarding/widgets/get_started_button.dart';
+import 'package:h2m_destrib/features/onboarding/widgets/person_image_and_text.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
