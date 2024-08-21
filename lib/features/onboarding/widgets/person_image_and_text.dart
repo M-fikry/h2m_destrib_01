@@ -35,7 +35,7 @@ class PersonImageAndtext extends StatelessWidget {
           left: 0,
           right: 0,
           child: Text('H2M\nتطبيق شركات التجارة و التوزيع',
-              style: TextStyles.font24mainRedBold, textAlign: TextAlign.center),
+              style: TextStyles.font18mainRedBold, textAlign: TextAlign.center),
         ),
       ],
     );

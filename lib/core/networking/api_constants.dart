@@ -1,6 +1,6 @@
 class ApiConstants {
-  //static const String apiBaseUrl = "https://127.0.0.1:44345/";
-  static const String apiBaseUrlApi = "http://10.0.2.2:8000/";
+  static const String apiBaseUrl = "http://h2m.runasp.net/";
+  //static const String apiBaseUrlApi = "http://127.0.0.1:8000/";
 
   static const String login = "User/Login";
 

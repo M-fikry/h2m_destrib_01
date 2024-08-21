@@ -48,10 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 spacingVertical(36),
                 const Column(
-                  children: [
-                    
-                    UsernameAndPassword()
-                  ],
+                  children: [UsernameAndPassword()],
                 ),
                 spacingVertical(30),
                 AppTextButton(
@@ -76,6 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
             user_namee: context.read<LoginCubit>().usernameController.text,
             passwordText: context.read<LoginCubit>().passwordController.text,
           ));
-    }
+    } 
+    //context.pushNamed(Routes.homeScreen);
   }
 }

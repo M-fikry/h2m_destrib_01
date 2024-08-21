@@ -1,4 +1,4 @@
-import 'dart:math';
+
 
 import 'package:flutter/material.dart';
 import 'package:h2m_destrib/core/Theming/colors.dart';
@@ -23,14 +23,14 @@ class PasswordValidations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      BuildValidationRow(
+      buildValidationRow(
           'يجب ان تحتوي كلمة المرور على حرف كبير وصغير ورقم ورموز',
           hasUppercase),
       spacingVertical(8),
     ]);
   }
 
-  Widget BuildValidationRow(String text, bool isValid) {
+  Widget buildValidationRow(String text, bool isValid) {
     return Row(
       children: [
         const CircleAvatar(
@@ -42,7 +42,7 @@ class PasswordValidations extends StatelessWidget {
               decoration: isValid ? TextDecoration.lineThrough : null,
               decorationThickness: 2,
               decorationColor: Colors.green,
-              color: isValid ? ColorManager.grey : ColorManager.mainRed),
+              color: isValid ? ColorManager.mainGrey : ColorManager.mainRed),
         )
       ],
     );

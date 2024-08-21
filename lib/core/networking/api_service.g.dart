@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'http://10.0.2.2:8000/';
+    baseUrl ??= 'http://h2m.runasp.net/';
   }
 
   final Dio _dio;

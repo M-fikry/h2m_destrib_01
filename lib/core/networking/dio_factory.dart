@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:h2m_destrib/core/networking/api_constants.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioFactory {
@@ -12,7 +13,7 @@ class DioFactory {
       dio = Dio();
       dio!
         
-        //..options.baseUrl = ApiConstants.apiBaseUrl
+        ..options.baseUrl = ApiConstants.apiBaseUrl
         ..options.connectTimeout = connectTimeout
         ..options.receiveTimeout = connectTimeout;
       AddDioInterCeptor();

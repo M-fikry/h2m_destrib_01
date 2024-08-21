@@ -6,15 +6,11 @@ class DestribLogoAndName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image(
-          image: const AssetImage('assets/images/hazemLogo.png'),
-          height: 180.h, width: 200.w,
-          fit: BoxFit.fill,
-          //opacity: AlwaysStoppedAnimation(.5),
-        ),
-      ],
+    return Image(
+      image: const AssetImage('assets/images/hazemLogo.png'),
+      height: 120.h, width: 150.w,
+      fit: BoxFit.fill,
+      //opacity: AlwaysStoppedAnimation(.5),
     );
   }
 }

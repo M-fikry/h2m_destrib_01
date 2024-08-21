@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:h2m_destrib/core/helpers/extensions.dart';
-import 'package:h2m_destrib/features/login/data/models/login_response.dart';
 import 'package:h2m_destrib/features/login/logic/cubit/login_cubit.dart';
 import 'package:h2m_destrib/features/login/logic/cubit/login_state.dart';
 

@@ -21,6 +21,7 @@ class OnboardingScreen extends StatelessWidget {
           bottom: 20.h,
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const DestribLogoAndName(),
             const PersonImageAndtext(),
@@ -36,7 +37,7 @@ class OnboardingScreen extends StatelessWidget {
                         children: [
                           TextSpan(
                               text: '01090585287',
-                              style: TextStyles.font18mainRed),
+                              style: TextStyles.font18mainRedBold),
                         ],
                       )),
                   SizedBox(

@@ -27,7 +27,7 @@ class H2mDestrib extends StatelessWidget {
         title: 'H2M Destrib',
         theme: ThemeData(
           primaryColor: ColorManager.mainRed,
-          scaffoldBackgroundColor: ColorManager.whiteColor,
+          scaffoldBackgroundColor: ColorManager.mainWhite,
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.onboardingScreen,
