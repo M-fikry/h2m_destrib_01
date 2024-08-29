@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: screens[NavClass.currIndex]),
       )),
       bottomNavigationBar: CurvedNavigationBar(
-        animationDuration: const Duration(milliseconds: 12000),
+        animationDuration: const Duration(milliseconds: 8000),
         buttonBackgroundColor: ColorManager.mainGold,
         index: 1,
         onTap: (index) {

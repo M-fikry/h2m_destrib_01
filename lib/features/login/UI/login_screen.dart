@@ -69,12 +69,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void validateAndLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      
       context.read<LoginCubit>().emitLoginStates(LoginRequestBody(
             user_namee: context.read<LoginCubit>().usernameController.text,
             passwordText: context.read<LoginCubit>().passwordController.text,
           ));
-    } 
+    }
     //context.pushNamed(Routes.homeScreen);
   }
 }
