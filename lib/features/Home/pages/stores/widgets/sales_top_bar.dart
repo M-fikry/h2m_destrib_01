@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:h2m_destrib/features/Home/pages/nav_class.dart';
 
-import '../../../core/Theming/colors.dart';
-import '../../../core/Theming/styles.dart';
+import '../../../../../core/Theming/colors.dart';
+import '../../../../../core/Theming/styles.dart';
 
-class HomeTopBar extends StatelessWidget {
-  const HomeTopBar({super.key});
+class SalesTopBar extends StatelessWidget {
+  const SalesTopBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +18,16 @@ class HomeTopBar extends StatelessWidget {
               style: TextStyles.font24white,
             ),
             Text(
-              'الرئيسية',
+              'حركة الأصناف',
               style: TextStyles.font18white,
             ),
           ],
         ),
         const Spacer(),
-        InkWell(
-          onTap: () {},
-          child: const CircleAvatar(
-            child: Icon(
+        CircleAvatar(
+          child: InkWell(
+            onTap: () {},
+            child: const Icon(
               Icons.add,
               color: ColorManager.mainRed,
             ),

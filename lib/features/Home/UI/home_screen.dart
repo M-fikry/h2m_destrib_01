@@ -9,9 +9,9 @@ import 'package:h2m_destrib/features/Home/widgets/items_see_all.dart';
 
 import '../../../core/Theming/styles.dart';
 import '../../../core/helpers/spacing.dart';
-import '../pages/home_payments_page.dart';
-import '../pages/home_sales_page.dart';
-import '../pages/home_store_page.dart';
+import '../pages/payments/home_payments_page.dart';
+import '../pages/sales/home_sales_page.dart';
+import '../pages/stores/home_store_page.dart';
 import '../widgets/customers_see_all.dart';
 import '../widgets/homeTopBar.dart';
 import '../widgets/homebanner.dart';
@@ -27,9 +27,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     List<Widget> screens = [
-      const HomePaymentsPage(),
-      const HomeSalesPage(),
       const HomeStorePage(),
+      const HomeSalesPage(),
+      const HomePaymentsPage(),
     ];
     return Scaffold(
       backgroundColor: ColorManager.mainRed,
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: screens[NavClass.currIndex]),
       )),
       bottomNavigationBar: CurvedNavigationBar(
-        animationDuration: const Duration(milliseconds: 8000),
+        animationDuration: const Duration(milliseconds: 5000),
         buttonBackgroundColor: ColorManager.mainGold,
         index: 1,
         onTap: (index) {
