@@ -11,15 +11,9 @@ class ItemsSeeAll extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'الأصناف الأكثر مبيعاً',
+          'الأصناف المتاحة',
           style: TextStyles.font18white,
-        ),
-        TextButton(
-            onPressed: () {},
-            child: Text(
-              'عرض الكل',
-              style: TextStyles.font18mainGoldBold,
-            ))
+        )
       ],
     );
   }

@@ -2,21 +2,12 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h2m_destrib/core/Theming/colors.dart';
-import 'package:h2m_destrib/features/Home/pages/nav_class.dart';
-import 'package:h2m_destrib/features/Home/widgets/customers_listview.dart';
-import 'package:h2m_destrib/features/Home/widgets/items_listview.dart';
-import 'package:h2m_destrib/features/Home/widgets/items_see_all.dart';
-
-import '../../../core/Theming/styles.dart';
-import '../../../core/helpers/spacing.dart';
-import '../pages/payments/home_payments_page.dart';
-import '../pages/sales/home_sales_page.dart';
-import '../pages/stores/home_store_page.dart';
-import '../widgets/customers_see_all.dart';
-import '../widgets/homeTopBar.dart';
-import '../widgets/homebanner.dart';
+import '../../pages/payments/home_payments_page.dart';
+import '../../pages/sales/home_sales_page.dart';
+import '../../pages/stores/home_store_page.dart';
 
 class HomeScreen extends StatefulWidget {
+  static int currIndex = 1;
   const HomeScreen({super.key});
 
   @override
@@ -38,15 +29,15 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Container(
             width: double.infinity.w,
             margin: const EdgeInsets.fromLTRB(20, 16, 20, 28),
-            child: screens[NavClass.currIndex]),
+            child: screens[HomeScreen.currIndex]),
       )),
       bottomNavigationBar: CurvedNavigationBar(
-        animationDuration: const Duration(milliseconds: 5000),
+        animationDuration: const Duration(milliseconds: 10000),
         buttonBackgroundColor: ColorManager.mainGold,
         index: 1,
         onTap: (index) {
           setState(() {
-            NavClass.currIndex = index;
+            HomeScreen.currIndex = index;
           });
         },
         height: 70.h,

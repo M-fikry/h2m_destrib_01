@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:h2m_destrib/core/helpers/extensions.dart';
 
+import '../../../core/Routing/routes.dart';
 import '../../../core/Theming/styles.dart';
 
 class CustomersSeeAll extends StatelessWidget {
@@ -11,11 +13,13 @@ class CustomersSeeAll extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'مديونية العملاء',
+          'العملاء',
           style: TextStyles.font18white,
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.customersScreen);
+            },
             child: Text(
               'عرض الكل',
               style: TextStyles.font18mainGoldBold,

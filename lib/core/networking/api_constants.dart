@@ -1,12 +1,12 @@
 class ApiConstants {
-  static const String apiBaseUrl = "http://h2m.runasp.net/";
+  static String apiBaseUrl = "http://h2m.runasp.net/";
   //static const String apiBaseUrlApi = "http://127.0.0.1:8000/";
 
   static const String login = "User/Login";
 
   static const String getMosamAmal = "User/GetMosamAmal";
 
-  static const String getSlaheyatUser = "User/getslaheyatuser";
+  static const String getRepresentative = "User/getslaheyatuser";
 
   //Products/GetProductSerch
 

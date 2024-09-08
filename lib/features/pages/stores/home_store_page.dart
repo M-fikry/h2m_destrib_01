@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:h2m_destrib/features/Home/pages/stores/widgets/sales_filter_bar.dart';
-import 'package:h2m_destrib/features/Home/pages/stores/widgets/sales_listview.dart';
-import 'package:h2m_destrib/features/Home/pages/stores/widgets/sales_top_bar.dart';
+import 'package:h2m_destrib/features/pages/stores/widgets/sales_filter_bar.dart';
+import 'package:h2m_destrib/features/pages/stores/widgets/sales_listview.dart';
+import 'package:h2m_destrib/features/pages/stores/widgets/sales_top_bar.dart';
 
-import '../../../../core/helpers/spacing.dart';
-import '../../widgets/homebanner.dart';
+import '../../../core/helpers/spacing.dart';
+import '../../Home/widgets/homebanner.dart';
 
 class HomeStorePage extends StatelessWidget {
   const HomeStorePage({super.key});
@@ -16,7 +16,7 @@ class HomeStorePage extends StatelessWidget {
       children: [
         const SalesTopBar(),
         spacingVertical(5),
-        const HomeBanner(),
+        const HomeBanner(currIndex: 0),
         spacingVertical(8),
         const SalesFilterBar(),
         spacingVertical(8),

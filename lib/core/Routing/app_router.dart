@@ -7,11 +7,21 @@ import 'package:h2m_destrib/features/login/UI/login_screen.dart';
 import 'package:h2m_destrib/features/login/logic/cubit/login_cubit.dart';
 import 'package:h2m_destrib/features/onboarding/onboarding_screen.dart';
 
+import '../../features/pages/customers/customers_data_page.dart';
+
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case Routes.customersScreen:
+        return MaterialPageRoute(builder: (_) => BlocProvider(
+                  create: (context)=> getIt.get<LoginCubit>(),
+                  child:const CustomersDataPage()),);
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context)=> getIt.get<LoginCubit>(),
+                  child: const HomeScreen(),
+                ));
       case Routes.loginScreen:
         return MaterialPageRoute(
             builder: (_) => BlocProvider(

@@ -1,21 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:h2m_destrib/features/Home/pages/nav_class.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../core/Theming/colors.dart';
 import '../../../core/Theming/styles.dart';
+import '../../login/logic/cubit/login_cubit.dart';
 
-class HomeTopBar extends StatelessWidget {
+class HomeTopBar extends StatefulWidget {
   const HomeTopBar({super.key});
+  @override
+  State<HomeTopBar> createState() => _HomeTopBarState();
+}
+
+class _HomeTopBarState extends State<HomeTopBar> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+
     return Row(
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'مرحبا Admin',
+              'مرحبا ${context.read<LoginCubit>().mandoubName ?? 'اسم المندوب'}',
               style: TextStyles.font24white,
             ),
             Text(
@@ -36,5 +50,12 @@ class HomeTopBar extends StatelessWidget {
         )
       ],
     );
+  }
+
+  Future<String> getName() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String name = await prefs.getString('namemndob') ?? 'اسم المندوب';
+
+    return name;
   }
 }

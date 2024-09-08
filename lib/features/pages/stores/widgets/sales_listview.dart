@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:h2m_destrib/features/Home/pages/stores/widgets/sales_item_card.dart';
+import 'package:h2m_destrib/features/pages/stores/widgets/sales_item_card.dart';
 
 class SalesListview extends StatelessWidget {
   const SalesListview({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/Theming/colors.dart';
-import '../../../../../core/Theming/styles.dart';
+import '../../../../core/Theming/colors.dart';
+import '../../../../core/Theming/styles.dart';
 
 class SalesFilterBar extends StatelessWidget {
   const SalesFilterBar({super.key});
@@ -12,7 +12,7 @@ class SalesFilterBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'حركة الوارد',
+          'يومية المخزون',
           style: TextStyles.font18white,
         ),
         TextButton(

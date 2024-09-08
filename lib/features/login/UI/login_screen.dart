@@ -8,6 +8,7 @@ import 'package:h2m_destrib/features/login/UI/widgets/login_block_listenner.dart
 import 'package:h2m_destrib/features/login/UI/widgets/username_and_password.dart';
 import 'package:h2m_destrib/features/login/data/models/login_request_body.dart';
 
+import '../../../core/networking/api_constants.dart';
 import '../logic/cubit/login_cubit.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -69,6 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void validateAndLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      ApiConstants.apiBaseUrl = context.read<LoginCubit>().pathController.text;
       context.read<LoginCubit>().emitLoginStates(LoginRequestBody(
             user_namee: context.read<LoginCubit>().usernameController.text,
             passwordText: context.read<LoginCubit>().passwordController.text,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/Theming/colors.dart';
-import '../../../../../core/Theming/styles.dart';
+import '../../../../core/Theming/colors.dart';
+import '../../../../core/Theming/styles.dart';
 
 class PaymentFilterBar extends StatelessWidget {
   const PaymentFilterBar({super.key});

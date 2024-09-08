@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/Theming/colors.dart';
-import '../../../../../core/Theming/styles.dart';
+import '../../../../core/Theming/colors.dart';
+import '../../../../core/Theming/styles.dart';
+import '../../../login/logic/cubit/login_cubit.dart';
 
-class PaymentTopBar extends StatelessWidget {
-  const PaymentTopBar({super.key});
+class SalesTopBar extends StatelessWidget {
+  const SalesTopBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +16,11 @@ class PaymentTopBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'مرحبا Admin',
+              'مرحبا ${context.read<LoginCubit>().mandoubName ?? 'اسم المندوب'}',
               style: TextStyles.font24white,
             ),
             Text(
-              'حركة التحصيل',
+              'حركة الأصناف',
               style: TextStyles.font18white,
             ),
           ],

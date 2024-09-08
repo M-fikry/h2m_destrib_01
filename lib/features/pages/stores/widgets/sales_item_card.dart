@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/Theming/styles.dart';
+import '../../../../core/Theming/styles.dart';
 
 class SalesItemCard extends StatelessWidget {
   const SalesItemCard({super.key});

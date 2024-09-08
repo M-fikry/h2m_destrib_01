@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:h2m_destrib/core/Theming/styles.dart';
-import 'package:h2m_destrib/features/Home/pages/nav_class.dart';
 
 import '../../../core/helpers/spacing.dart';
 
 class HomeBanner extends StatelessWidget {
-  const HomeBanner({super.key});
+  final int currIndex;
+  const HomeBanner({super.key, required this.currIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -61,17 +61,31 @@ class HomeBanner extends StatelessWidget {
                     )
                   ])),
           Positioned(
-              left: 5.w,
-              top: NavClass.currIndex == 0 ? -60.h : -15.h,
+              left: currIndex == 3 ? -20.w : 5.w,
+              top: currIndex == 0
+                  ? -60.h
+                  : currIndex == 3
+                      ? -50.h
+                      : -15.h,
               child: Image.asset(
-                NavClass.currIndex == 2
+                currIndex == 2
                     ? 'assets/images/moneyCollect.png'
-                    : NavClass.currIndex == 1
+                    : currIndex == 1
                         ? 'assets/images/person.png'
-                        : 'assets/images/storeLoading.png',
+                        : currIndex == 3
+                            ? 'assets/images/customer.png'
+                            : 'assets/images/storeLoading.png',
                 fit: BoxFit.fill,
-                height: NavClass.currIndex == 0 ? 265.h : 220.h,
-                width: NavClass.currIndex == 2 ? 180.w : 160.w,
+                height: currIndex == 0
+                    ? 265.h
+                    : currIndex == 3
+                        ? 280.h
+                        : 220.h,
+                width: currIndex == 2
+                    ? 180.w
+                    : currIndex == 3
+                        ? 220.w
+                        : 160.w,
               ))
         ],
       ),

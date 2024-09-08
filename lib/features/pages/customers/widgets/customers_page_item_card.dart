@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/Theming/styles.dart';
+import '../../../../core/Theming/styles.dart';
 
-class PaymentsItemCard extends StatelessWidget {
-  const PaymentsItemCard({super.key});
+class CustomersPageItemCard extends StatelessWidget {
+  const CustomersPageItemCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,28 +15,28 @@ class PaymentsItemCard extends StatelessWidget {
         onTap: () {},
         child: Row(
           children: [
-            const Card(
+            Card(
                 clipBehavior: Clip.antiAlias,
                 semanticContainer: true,
-                margin: EdgeInsets.fromLTRB(20, 8, 0, 8),
+                margin: const EdgeInsets.fromLTRB(20, 8, 0, 8),
                 elevation: 2.0,
-                color: Color.fromARGB(255, 230, 199, 104),
+                color: const Color.fromARGB(255, 230, 199, 104),
                 child: SizedBox(
                     width: 100,
                     height: 150,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('بطيخ'),
-                      ],
-                    ))),
+                    child: Center(
+                        child: Text(
+                      'محمد عبد الرحمن محمد',
+                      style: TextStyles.font14DarkRedBold,
+                      textAlign: TextAlign.center,
+                    )))),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('01090585287', style: TextStyles.font18mainGoldBold),
-                  Text('H2M', style: TextStyles.font18mainGoldBold),
+                  Text('0.00', style: TextStyles.font18mainGoldBold),
                 ],
               ),
             ),
